@@ -70,9 +70,12 @@ main img{
 
 footer{
   background-color: #fdfe00;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
   padding: 100px 0;
+}
+.footer-center{
+  display: flex;
+  justify-content: space-between;
+  width: 700px ;
+  margin: 20px auto;
 }
