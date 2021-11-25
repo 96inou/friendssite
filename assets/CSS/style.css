@@ -1,0 +1,368 @@
+* {
+  font-family: "M PLUS Rounded 1c";
+  color: rgb(165, 34, 78);
+}
+
+.card{
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+  margin-top: 100px;
+  transition: all 3s ease;
+  transform: translateX(0%);
+  opacity:1;
+  display: flex;
+}
+
+.card.hide{
+  transition: all 3s ease;
+  opacity:0;
+  transform: translateX(50%);
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+img{
+  max-width: 100%;
+}
+
+.leftheader{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.leftheader::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 3px;
+  height: 100vh;
+  background: url('../img/img01.png') repeat-y top right / 100%;
+}
+
+/* ハンバーガーメニュー */
+.hamburger{
+  width: 28px;
+  height: 30px;
+}
+.hamburger .pate,
+.hamburger .pate::before,
+.hamburger .pate::after{
+  width: 100%;
+  height: 1px;
+  background-color: rgb(165, 34, 78);
+  border-radius: 2px;
+  display: block;
+  transition: all .5s ease;
+}
+
+.hamburger .pate{
+  position: relative;
+  top: calc(50% - 2px);
+}
+
+.hamburger .pate::before,
+.hamburger .pate::after{
+  content: '';
+  position: absolute;
+}
+
+.hamburger .pate::before{
+top: -9px;
+}
+
+.hamburger .pate::after{
+  top: 9px
+}
+
+/* ハンバーガーの変更をする部分 */
+.hamburger.on .pate{
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hamburger.on .pate::before{
+  transform: rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.on .pate::after{
+  transform: rotate(-45deg) translate(7px,-8px);
+}
+
+@media screen and (max-width: 768px) {
+  .leftheader{
+    display: block;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .leftheader::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: url('../img/img02.png') repeat-x left /1080px auto;
+  }
+}
+
+.header-wrapper{
+  width: 130px;
+  padding: 33px;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header-wrapper{
+    width: 100%;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .icon-wrapper{
+    width: 40px;
+  }
+}
+
+nav{
+  width: 130px;
+  text-align: center;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav{
+    width: 100%;
+    background: white;
+    padding-top: 50px;
+  }
+}
+
+.nav_item{
+  padding: 30px 5px;
+}
+
+.nav_item a{
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: all .5s ease;
+}
+
+.nav_item a:hover{
+  color: #c3974a;
+  transition: all .5s ease;
+}
+
+.nav_item span{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mainTitle{
+  text-align: center;
+  margin-top: 100px;
+  width: 1000px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.content{
+  margin-left: 129px;
+}
+
+@media screen and (max-width: 768px) {
+  .content{
+    margin-left: 0;
+  }
+}
+
+.content-inner{
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .content-inner{
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.card{
+  width: 58.5%;
+  margin: 200px auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card{
+    width: 86.5%;
+    margin: 100px auto;
+  }
+}
+
+.friend_name{
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.introduction{
+    overflow-x: hidden;
+}
+
+.introduction-text{
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: left;
+  line-height: 2;
+}
+
+.container{
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    display: block;
+  }
+}
+
+.link_group{
+  padding: 4em 0 5em;
+  background-color: #F6F2EF;
+}
+
+.link_groupTitle{
+  font-size: 50px;
+  width: 50px;
+}
+
+.link_item{
+  width: calc((100% - 90px) / 3);
+  text-align: center;
+  margin: 0 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .link_groupTitle{
+    font-size: 50px;
+    width: auto;
+    text-align: center;
+  }
+
+  .link_item{
+    width: 100%;
+    margin: 100px 0;
+  }
+}
+
+.link-item-wrap{
+  display: block;
+}
+
+.link-item-wrap:hover{
+  color: #c3974a;
+  transition: all .5s ease;
+}
+
+.link_item_frame{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.link_item img{
+  transition: all .5s ease;
+}
+
+/* .link_item img:hover{
+  transform: scale(1.2);
+  transition: all .5s ease;
+} */
+
+.link_item-wrap:hover .link_item_text{
+  color: #c3974a;
+  transition: all .5s ease;
+  
+}
+
+.link_item-wrap:hover img{
+  transform: scale(1.2);
+  transition: all .5s ease;
+}
+
+.link_item_text{
+  margin-top: 15px;
+}
+
+/* .link_item_text a:hover{
+  color: #c3974a;
+  transition: all .5s ease;
+} */
+
+.archive{
+  text-align: center;
+  display: block;
+  margin: 100px auto 0;
+}
+
+.archive:hover{
+  color: #c3974a;
+  transition: all .5s ease;
+}
+
+footer{
+  margin-left: 129px;
+  text-align: center;
+  padding: 1em;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  footer{
+    margin-left: 0;
+  }
+}
+
+footer::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: url('../img/img02.png') repeat-x left /1080px auto;
+}
+
+.mainTitle{
+  transition: all 3s ease;
+  transform: translateY(0%);
+  opacity:1;
+}
+
+.mainTitle.up{
+  transition: all 3s ease;
+  opacity:0;
+  transform: translateY(50%);
+}
