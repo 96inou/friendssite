@@ -1,0 +1,140 @@
+body {
+    cursor: none;
+    a{
+      cursor: none;
+    }
+  }
+
+  $color1:#f5f5f5;
+  $color2:#fdfe00;
+  $color3:blue;
+  $color4:black;
+
+  .cursor{
+    position: fixed;     /* 絶対位置になるように指定 */
+    z-index: 2;          /* 重なり順を上に指定。他の要素に合わせて数字を大きくしてください。 */
+    pointer-events: none;/*【重要】マウス直下に常に画像があるので、全てをクリックできなくなる。noneにして対応*/
+    width: 40px;
+    height: 40px;
+    background-color: $color2;
+    border-radius: 50%;
+    transition: transform ease .5s;
+  }
+  .is-active {
+    background-color: $color3;
+    opacity: 0.5;
+  }
+  // ーーーーーーカーソルここまでーーーーーー
+
+  .logo{
+    height: 70px;
+    width: auto;
+  }
+
+  .header1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color1;
+    padding: 15px 150px;
+    position:relative;
+  }
+
+  .header-right ul{
+    display: flex;
+    align-items: center;
+    color: $color4;
+    font-size: 20px;
+  }
+  
+  .header-right li{
+    margin-left: 20px;
+    &:hover{
+      color: $color2;
+      transition: .5s ;
+    }
+  }
+  
+  .header-right a{
+    display: block;
+    padding: 20px 0 0;
+    /* ↑マウスが乗った時にリンクとマウスが反応する範囲を広げた */
+  
+  }
+  
+  /* ーーーーーーヘッダー1ここまでーーーーーー */
+  .header2{
+    background-color: $color1;
+  }
+  
+  .header-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    line-height: 300%;
+    letter-spacing: 10px;
+
+    h1{
+      font-size: 50px;
+    }
+
+    h2{
+      font-size: 15px;
+    }
+  }
+  /* ーーーーーーヘッダー2ここまでーーーーーー */
+
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    margin-bottom: 50px;
+    letter-spacing: 10px;
+
+    h3{
+      line-height: 2;
+    }
+    img{
+      border-radius: 50%;
+      margin-bottom: 50px;
+    }
+  }
+  /* ーーーーーーメインここまでーーーーーー*/
+  .footer-over{
+    background-color:$color4;
+    color:$color1;
+    font-size: 35px;
+    padding: 30px 0;
+    text-align: center;
+    letter-spacing: 10px;
+  
+  }
+  
+  footer{
+    background-color: $color2;
+    text-align: center;
+    padding: 100px 0;
+  }
+  .footer-center{
+    display: flex;
+    justify-content: space-between;
+    width: 700px ;
+    margin: 20px auto;
+
+    img{
+      height: 150px;
+      width: 200px;
+      display: block;
+      opacity: 1;
+      transition: .3s;
+
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+  
