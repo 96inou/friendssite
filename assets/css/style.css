@@ -176,4 +176,9 @@ footer {
 .footer-center img:hover {
   opacity: 0.5;
 }
+
+.footer-center a{
+  display: block;
+  background-color: white;
+}
 /*# sourceMappingURL=style.css.map */
